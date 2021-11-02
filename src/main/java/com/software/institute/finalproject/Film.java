@@ -49,7 +49,7 @@ public class Film {
         return release_year;
     }
 
-    public void setReleaseyear(int releaseyear) {
-        this.releaseyear = releaseyear;
+    public void setRelease_year(int release_year) {
+        this.release_year = release_year;
     }
 }

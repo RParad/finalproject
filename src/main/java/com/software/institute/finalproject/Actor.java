@@ -11,12 +11,13 @@ public class Actor {
     /////////////////attributes\\\\\\\\\\\\\\\\\\\\
     private String FirstName;
     private String LastName;
+
     @Id
     private int actor_id;
 
-    //////////////////////Constructors\\\\\\\\\\
 
-        public Actor(){
+        public Actor(int actor_id){
+            this.actor_id = actor_id;
         }
 
         public String getFirstName() {

@@ -18,7 +18,8 @@ public class Film {
 
 ///////// Constructors
 
-    public Film(String title, int length, int release_year) {
+    public Film(int film_id, String title, int length, int release_year) {
+        this.film_id = film_id;
         this.title = title;
         this.length = length;
         this.release_year = release_year;
@@ -27,6 +28,14 @@ public class Film {
 /////////
 
     public Film() {
+    }
+
+    public int getFilm_id() {
+        return film_id;
+    }
+
+    public void setFilm_id(int film_id) {
+        this.film_id = film_id;
     }
 
     public String getTitle() {

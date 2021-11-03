@@ -1,11 +1,11 @@
-package com.software.institute.finalproject;
+//package com.software.institute.finalproject;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import javax.persistence.Entity;
+//import javax.persistence.Id;
+//import javax.persistence.Table;
 
-@Entity
-@Table (name ="actor")
+//@Entity
+/*@Table (name ="actor")
 public class Actor {
 
     /////////////////attributes\\\\\\\\\\\\\\\\\\\\
@@ -36,6 +36,6 @@ public class Actor {
             LastName = lastName;
         }
     }
-
+*/
 
 

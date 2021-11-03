@@ -41,6 +41,15 @@ public class FinalprojectApplication {
 		filmRepository.save(savedFilm);
 		return "Film Has Been Added";
 	}
+
+
+	/*////////////////////////Delete\\\\\\\\\\\\\\\\\\\\\\\\
+	@DeleteMapping("/removeFilm{film_id}")
+	public String deleteFilm(@PathVariable("film_id") int film_id) {
+		filmRepository.deleteById(film_id);
+		return "Film deleted.";
+	}*/
+
 	//@GetMapping("/actor")
 	//public @ResponseBody Iterable<Actor> getAllActors() {
 	//	return ActorRepository.findAll();

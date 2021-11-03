@@ -3,9 +3,7 @@ package com.software.institute.finalproject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -21,7 +19,7 @@ public class FinalprojectApplication {
 		SpringApplication.run(FinalprojectApplication.class, args);
 	}
 
-
+	/////////////////////// Read Function \\\\\\\\\\\\\\\\\\\\\\\\\\
 	@GetMapping("/films")
 	public @ResponseBody Iterable<Film> getAllUsers(){
 		return filmRepository.findAll();
@@ -31,6 +29,17 @@ public class FinalprojectApplication {
 	public @ResponseBody
 	Optional<Film> getAllUsers4() {
 		return filmRepository.findById(6);
+	}
+
+	///////////////////// Create function \\\\\\\\\\\\
+
+	@PostMapping("/addFilm")
+	public @ResponseBody
+	String newFilm(@RequestParam int film_id, @RequestParam String title, @RequestParam int length, @RequestParam int language_id) {
+
+		Film savedFilm = new Film(film_id, title, length, language_id);
+		filmRepository.save(savedFilm);
+		return "Film Has Been Added";
 	}
 	//@GetMapping("/actor")
 	//public @ResponseBody Iterable<Actor> getAllActors() {

@@ -14,15 +14,15 @@ public class Film {
     private int film_id;
     private String title;
     private int length;
-    private int release_year;
+    private int language_id;
 
 ///////// Constructors
 
-    public Film(int film_id, String title, int length, int release_year) {
+    public Film(int film_id, String title, int length, int language_id) {
         this.film_id = film_id;
         this.title = title;
         this.length = length;
-        this.release_year = release_year;
+        this.language_id  = language_id;
     }
 
 /////////
@@ -54,11 +54,19 @@ public class Film {
         this.length = length;
     }
 
-    public int getRelease_year() {
+    public int getLanguage_id() {
+        return language_id;
+    }
+
+    public void setLanguage_id(int language_id) {
+        this.language_id = language_id;
+    }
+
+    /* public int getRelease_year() {
         return release_year;
     }
 
     public void setRelease_year(int release_year) {
         this.release_year = release_year;
-    }
+    }*/
 }

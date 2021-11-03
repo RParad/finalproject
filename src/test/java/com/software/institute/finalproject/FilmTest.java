@@ -14,13 +14,13 @@ public class FilmTest {
     }
     @Test
     public void testGetTitleMethod() {
-        Film testFilm = new Film(1, "Avatar" , 134, 2010);
+        Film testFilm = new Film(1, "Avatar" , 134, 6);
         assertEquals("Avatar", testFilm.getTitle(), "The film Title is correct" );
     }
     @Test
     public void testSetTitleMethod() {
         String Title = "Avatar";
-        Film testFilm = new Film(1, "Avatar", 134, 2010);
+        Film testFilm = new Film(1, "Avatar", 134, 6);
         assertEquals("Avatar", testFilm.getTitle(), Title);
     }
 }

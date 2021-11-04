@@ -22,4 +22,5 @@ public class FilmTest {
         Film testFilm = new Film(1, "Avatar", 134, 6);
         assertEquals("Avatar", testFilm.getTitle(), Title);
     }
+    
 }

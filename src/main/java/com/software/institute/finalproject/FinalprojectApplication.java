@@ -49,10 +49,19 @@ public class FinalprojectApplication {
 
 
 	//////////////////////Update\\\\\\\\\\\\\\\\\\\\\\\\\\
-	@PutMapping("/films/{film_id}")
-	public @ResponseBody String editFilm(@PathVariable ("film_id") int film_id) {
-		return "Film has been Changed";
-	}
+
+	/*@PutMapping("/films/{film_id}")
+	public ResponseEntity<Film> updateFilm(@PathVariable("film_id") int film_id,
+			@RequestBody Film filmDetails) throws ResourceNotFoundException {
+			Film film = filmRepository.findById(film_id).orElseThrow(() -> new ResourceNotFoundException("Film not found for this"));
+
+		filmDetails.setFilm_id(film.getFilm_id());
+		filmDetails.setTitle(film.getTitle());
+		filmDetails.setLength(film.getLength());
+		filmDetails.setLanguage_id(film.getLanguage_id());
+		final Film updatedFilm = filmRepository.save(film);
+		return ResponseEntity.ok(updatedFilm);
+	}*/
 
 
 	//@GetMapping("/actor")

@@ -1,13 +1,13 @@
-package com.software.institute.finalproject;
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import org.junit.runner.RunWith;
-@RunWith(Cucumber.class)
-@CucumberOptions(
-
-        features = "src/test/resources",
-        glue = "com.software.institute.finalproject;" )
-
-public class runCucumber {
-}
+//package com.software.institute.finalproject;
+//
+//import cucumber.api.CucumberOptions;
+//import cucumber.api.junit.Cucumber;
+//import org.junit.runner.RunWith;
+//@RunWith(Cucumber.class)
+//@CucumberOptions(
+//
+//        features = "src/test/resources",
+//        glue = "com.software.institute.finalproject;" )
+//
+//public class runCucumber {
+//}

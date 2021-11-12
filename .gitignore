@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#Secret Files
+/src/main/java/com/software/institute/finalproject/AwsSecrets.java
+/src/main/java/com/software/institute/finalproject/Secrets.java
+/src/main/resources/application.yml
+
+
+#Mac Files
+.DS_Store
+/src/.DS_Store
+/src/main/.DS_Store

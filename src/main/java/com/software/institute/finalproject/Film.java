@@ -1,19 +1,19 @@
 package com.software.institute.finalproject;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Table(name ="film")
 public class Film {
 
 ///////// Attributes
 
     @Id
+    @GeneratedValue
     private int film_id;
     private String title;
-    private int length;
+    private Integer length;
     private int language_id;
 
 ///////// Constructors
@@ -50,7 +50,7 @@ public class Film {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(Integer length) {
         this.length = length;
     }
 
@@ -62,11 +62,4 @@ public class Film {
         this.language_id = language_id;
     }
 
-    /* public int getRelease_year() {
-        return release_year;
-    }
-
-    public void setRelease_year(int release_year) {
-        this.release_year = release_year;
-    }*/
 }

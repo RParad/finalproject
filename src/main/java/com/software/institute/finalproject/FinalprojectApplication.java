@@ -4,6 +4,8 @@ import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,14 +48,19 @@ public class FinalprojectApplication {
 
 	///////////////////// Create function \\\\\\\\\\\\
 
-	@PostMapping("/addFilm")
-	public @ResponseBody
-	String newFilm(@RequestParam int film_id, @RequestParam String title, @RequestParam Integer length, @RequestParam int language_id) {
-		Film savedFilm = new Film(film_id, title, length, language_id);
+//	@PostMapping("/addFilm")
+//	public @ResponseBody
+//	String newFilm(@RequestParam int film_id, @RequestParam String title, @RequestParam Integer length, @RequestParam int language_id) {
+//		Film savedFilm = new Film(film_id, title, length, language_id);
+//		filmRepository.save(savedFilm);
+//		return "Film Has Been Added";
+//	}
+	@PostMapping(path="/films/addFilm", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<Film> addAFilm(@RequestBody Film newFilm){
+		Film savedFilm = new Film(newFilm.getFilm_id(),newFilm.getTitle(), newFilm.getLength(), newFilm.getLanguage_id());
 		filmRepository.save(savedFilm);
-		return "Film Has Been Added";
+		return new ResponseEntity<Film>(savedFilm, HttpStatus.OK);
 	}
-
 
 	////////////////////////Delete\\\\\\\\\\\\\\\\\\\\\\\\
 	@DeleteMapping("/removeFilm/{film_id}")
@@ -61,6 +68,11 @@ public class FinalprojectApplication {
 		filmRepository.deleteById(film_id);
 		return "Film deleted.";
 	}
+//	@DeleteMapping("/removeFilm/{title}")
+//	public @ResponseBody String deleteFilm(@PathVariable("title") String title) {
+//		filmRepository.deleteById(title);
+//		return "Film deleted.";
+//	}
 
 
 	//////////////////////Update\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -16,7 +16,7 @@ public class Actor {
 
 
     ///////////////////////Constructors\\\\\\\\\\\\\\\\\
-    public Actor(){
+    public Actor(int i, String avatar, int i1, int i2){
     }
 
     public Actor(int actor_id, String first_name, String last_name) {

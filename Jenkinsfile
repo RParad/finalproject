@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir("/home/ubuntu/finalproject") {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn clean test'
                 }
             }
         }
